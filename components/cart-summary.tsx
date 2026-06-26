@@ -32,19 +32,19 @@ export function CartSummary({ items }: CartSummaryProps) {
       {/* Subtotal */}
       <div className="flex items-center justify-between text-sm">
         <dt className="text-muted-foreground">Ara Toplam</dt>
-        <dd className="font-medium text-foreground">{formatPrice(subtotal)}</dd>
+        <dd className="whitespace-nowrap font-medium text-foreground">{formatPrice(subtotal)}</dd>
       </div>
 
       {/* Shipping — free placeholder */}
       <div className="flex items-center justify-between text-sm">
         <dt className="text-muted-foreground">Kargo</dt>
-        <dd className="font-medium text-accent">Ücretsiz</dd>
+        <dd className="whitespace-nowrap font-medium text-accent">Ücretsiz</dd>
       </div>
 
       {/* Total */}
       <div className="flex items-center justify-between border-t border-border pt-3 text-base">
         <dt className="font-semibold text-foreground">Toplam</dt>
-        <dd className="text-lg font-bold text-foreground">
+        <dd className="whitespace-nowrap text-lg font-bold text-foreground">
           {formatPrice(total)}
         </dd>
       </div>

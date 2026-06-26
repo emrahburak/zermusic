@@ -30,6 +30,7 @@ export function Navbar() {
   const itemCount = useCartCount();
 
   return (
+    <>
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-sm">
       <nav
         aria-label="Ana navigasyon"
@@ -117,9 +118,10 @@ export function Navbar() {
           ))}
         </ul>
       </div>
-
-      {/* Cart slide-in drawer */}
-      <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
     </header>
+
+      {/* Cart slide-in drawer — outside header to avoid backdrop-filter containing block */}
+      <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
+    </>
   );
 }

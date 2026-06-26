@@ -88,9 +88,9 @@ export default function CartPage() {
                 </div>
 
                 {/* Details */}
-                <div className="flex flex-1 flex-col gap-1">
+                <div className="flex min-w-0 flex-1 flex-col gap-1">
                   <div className="flex items-start justify-between gap-2">
-                    <h2 className="text-base font-semibold text-foreground">
+                    <h2 className="truncate text-base font-semibold text-foreground">
                       {item.name}
                     </h2>
                     <button
@@ -107,9 +107,9 @@ export default function CartPage() {
                     Birim fiyat: {formatPrice(item.price)}
                   </p>
 
-                  <div className="mt-auto flex items-center justify-between">
+                  <div className="mt-auto flex flex-wrap items-center justify-between gap-2">
                     {/* Quantity controls */}
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-shrink-0 items-center gap-2">
                       <button
                         type="button"
                         aria-label={`${item.name} adetini azalt`}
@@ -135,7 +135,7 @@ export default function CartPage() {
                     </div>
 
                     {/* Line total */}
-                    <span className="text-base font-bold text-foreground">
+                    <span className="whitespace-nowrap text-base font-bold text-foreground">
                       {formatPrice(item.price * item.quantity)}
                     </span>
                   </div>

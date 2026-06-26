@@ -15,6 +15,7 @@ import {
   useEffect,
   useMemo,
   useReducer,
+  useState,
   type ReactNode,
 } from "react";
 
@@ -33,8 +34,10 @@ const CartContext = createContext<CartContextValue | null>(null);
  * Lazy initializer for `useReducer`.
  *
  * Reads the persisted cart from localStorage on the client. On the
- * server (or when storage is unavailable) it falls back to the empty
- * initial state, avoiding hydration mismatches.
+ * server it falls back to the empty initial state.
+ *
+ * NOTE: The value from this initializer is NOT used during hydration.
+ * See `hydrated` guard below.
  */
 function initFromStorage(): CartState {
   if (typeof window === "undefined") {
@@ -61,11 +64,18 @@ function initFromStorage(): CartState {
 
 /** Provider component — wrap the app (or a subtree) to enable cart state. */
 export function CartProvider({ children }: { children: ReactNode }) {
+  const [hydrated, setHydrated] = useState(false);
   const [state, dispatch] = useReducer(cartReducer, initialState, initFromStorage);
 
-  // Persist cart to localStorage on every state change.
+  // Mark hydration complete after first client-side paint.
+  // Until then, expose initialState to match the server render.
   useEffect(() => {
-    if (typeof window === "undefined") {
+    setHydrated(true);
+  }, []);
+
+  // Persist cart to localStorage on every state change (only after hydration).
+  useEffect(() => {
+    if (!hydrated) {
       return;
     }
 
@@ -74,9 +84,16 @@ export function CartProvider({ children }: { children: ReactNode }) {
     } catch {
       // Storage may be full or disabled — fail silently.
     }
-  }, [state]);
+  }, [state, hydrated]);
 
-  const value = useMemo<CartContextValue>(() => ({ state, dispatch }), [state, dispatch]);
+  // During hydration the provider exposes initialState so that every consumer
+  // produces the same DOM as the server render. After hydration it switches
+  // to the real reducer state (which may contain localStorage data).
+  const visibleState = hydrated ? state : initialState;
+  const value = useMemo<CartContextValue>(
+    () => ({ state: visibleState, dispatch }),
+    [visibleState, dispatch],
+  );
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }
