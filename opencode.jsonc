@@ -1,0 +1,23 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "@21st-dev/magic": {
+      "type": "local",
+      "command": ["npx", "-y", "@21st-dev/magic@latest"],
+      "environment": {
+        "API_KEY": "6ffb587b8d909001293609eeb38293ae8ba1e2d1b5083aa1e654f3b79b7d3dc3x"
+      },
+      "enabled": true
+    },
+    "tavily-remote-mcp": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "mcp-remote",
+        "https://mcp.tavily.com/mcp/?tavilyApiKey=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"
+      ],
+      "enabled": true
+    }
+  }
+}

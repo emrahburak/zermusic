@@ -1,0 +1,48 @@
+{
+  "id": "zer-muzik-website",
+  "name": "Zer Müzik Frontend Website",
+  "status": "active",
+  "objective": "Build a frontend-only Next.js website for Zer Müzik with white/ivory palette, store, and shopping cart using dummy data.",
+  "context_files": [
+    ".opencode/context/core/essential-patterns.md",
+    ".opencode/context/core/standards/code-quality.md",
+    ".opencode/context/core/workflows/component-planning.md",
+    ".opencode/context/core/workflows/feature-breakdown.md",
+    ".opencode/context/core/workflows/design-iteration-overview.md",
+    ".opencode/context/core/workflows/design-iteration-plan-file.md",
+    ".opencode/context/ui/web/ui-styling-standards.md",
+    ".opencode/context/ui/web/design-systems.md",
+    ".opencode/context/ui/web/react-patterns.md",
+    ".opencode/context/development/frontend/when-to-delegate.md",
+    ".opencode/context/ui/web/animation-basics.md",
+    ".opencode/context/ui/web/animation-components.md"
+  ],
+  "reference_files": [
+    ".opencode/opencode.jsonc",
+    ".tmp/external-context/nextjs-app-router/project-setup.md",
+    ".tmp/external-context/nextjs-app-router/client-state-cart.md",
+    ".tmp/external-context/nextjs-app-router/static-export.md",
+    "design-system/zer-müzik/MASTER.md",
+    "package.json",
+    "next.config.ts",
+    "tailwind.config.ts",
+    "app/layout.tsx",
+    "app/page.tsx",
+    "app/store/page.tsx"
+  ],
+  "exit_criteria": [
+    "Next.js project bootstrapped and runs locally.",
+    "Design system with white/ivory palette implemented as CSS/Tailwind tokens.",
+    "All page sections (Hero, Services, Store, Product Detail, Cart, Footer) render correctly.",
+    "Cart add/remove/update quantity works with local state persisted to localStorage.",
+    "Responsive on 375px, 768px, 1024px, 1440px.",
+    "Build succeeds (next build) with no errors."
+  ],
+  "subtask_count": 12,
+  "completed_count": 12,
+  "created_at": "2026-06-26T10:00:00Z",
+  "completed_at": null,
+  "bounded_context": "frontend",
+  "module": "@app/zer-muzik",
+  "vertical_slice": "zer-muzik-website"
+}

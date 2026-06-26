@@ -1,0 +1,39 @@
+{
+  "id": "zer-muzik-website-06",
+  "seq": "06",
+  "title": "Build Services section for handmade guitars, repair, parts, and violin making",
+  "status": "completed",
+  "agent_id": null,
+  "started_at": null,
+  "depends_on": [
+    "02",
+    "03"
+  ],
+  "parallel": true,
+  "suggested_agent": "OpenFrontendSpecialist",
+  "context_files": [
+    ".opencode/context/ui/web/ui-styling-standards.md",
+    ".opencode/context/core/workflows/component-planning.md",
+    ".opencode/context/core/workflows/design-iteration-overview.md",
+    ".opencode/context/ui/web/animation-basics.md"
+  ],
+  "completed_at": "2026-06-26T11:44:00.569Z",
+  "completion_summary": "Services section created",
+  "reference_files": [
+    "design-system/zer-müzik/MASTER.md",
+    "app/page.tsx",
+    "sections/hero.tsx"
+  ],
+  "acceptance_criteria": [
+    "Services section displays four cards: Handmade Guitars, Guitar Repair, Guitar Parts, Violin Making.",
+    "Each card has an SVG icon (no emojis), title, short description, and hover lift/shadow transition.",
+    "Grid is 1 column on mobile, 2 on md, 4 on lg.",
+    "Cards use white background on ivory section background for clear hierarchy.",
+    "All text meets WCAG AA contrast against card/section backgrounds.",
+    "Section anchors can be linked from navigation or hero CTA."
+  ],
+  "deliverables": [
+    "sections/services.tsx",
+    "app/page.tsx (services integration)"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-06-26T00:00:00Z",
+  "libraries": {
+    "nextjs-app-router": {
+      "files": [
+        {
+          "filename": "project-setup.md",
+          "topic": "Create a new Next.js project with TypeScript and Tailwind CSS",
+          "tech_stack": "Next.js App Router",
+          "fetched": "2026-06-26T00:00:00Z",
+          "source": "Context7 API (/websites/nextjs)"
+        },
+        {
+          "filename": "routing-layouts.md",
+          "topic": "App Router routing and layout conventions",
+          "tech_stack": "Next.js App Router",
+          "fetched": "2026-06-26T00:00:00Z",
+          "source": "Context7 API (/websites/nextjs)"
+        },
+        {
+          "filename": "client-state-cart.md",
+          "topic": "Client-side cart state with Context and useReducer",
+          "tech_stack": "Next.js App Router + React",
+          "fetched": "2026-06-26T00:00:00Z",
+          "source": "Context7 API (/websites/nextjs + /reactjs/react.dev)"
+        },
+        {
+          "filename": "static-export.md",
+          "topic": "Static export configuration for frontend-only sites",
+          "tech_stack": "Next.js App Router",
+          "fetched": "2026-06-26T00:00:00Z",
+          "source": "Context7 API (/websites/nextjs)"
+        }
+      ]
+    }
+  }
+}

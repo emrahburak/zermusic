@@ -1,0 +1,42 @@
+{
+  "id": "zer-muzik-website-05",
+  "seq": "05",
+  "title": "Build Hero section with brand statement, CTA, and craft imagery placeholder",
+  "status": "completed",
+  "depends_on": [
+    "02",
+    "03"
+  ],
+  "parallel": true,
+  "suggested_agent": "OpenFrontendSpecialist",
+  "context_files": [
+    ".opencode/context/ui/web/ui-styling-standards.md",
+    ".opencode/context/ui/web/animation-basics.md",
+    ".opencode/context/ui/web/animation-components.md",
+    ".opencode/context/core/workflows/design-iteration-overview.md",
+    ".opencode/context/core/workflows/design-iteration-stage-layout.md",
+    ".opencode/context/core/workflows/design-iteration-stage-animation.md",
+    ".opencode/context/core/workflows/component-planning.md"
+  ],
+  "agent_id": null,
+  "started_at": null,
+  "completed_at": "2026-06-26T11:43:59.957Z",
+  "completion_summary": "Hero section created",
+  "reference_files": [
+    "design-system/zer-müzik/MASTER.md",
+    "app/page.tsx",
+    "components/navbar.tsx"
+  ],
+  "acceptance_criteria": [
+    "Hero section renders on the home page above the fold.",
+    "Headline uses Amatic SC and communicates handmade guitar/repair/violin craft.",
+    "Primary CTA links to /store and secondary CTA links to services/contact.",
+    "Atmospheric craft imagery placeholder is present and responsive (unoptimized Next/Image or img with src placeholder).",
+    "Liquid-glass style effects and smooth transitions follow MASTER.md.",
+    "Section is visually balanced at 375px, 768px, 1024px, and 1440px."
+  ],
+  "deliverables": [
+    "sections/hero.tsx",
+    "app/page.tsx (hero integration)"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "zer-muzik-website-07",
+  "seq": "07",
+  "title": "Create dummy product catalog data, TypeScript types, and helper utilities",
+  "status": "completed",
+  "depends_on": [
+    "01"
+  ],
+  "parallel": true,
+  "suggested_agent": "CoderAgent",
+  "context_files": [
+    ".opencode/context/core/standards/code-quality.md",
+    ".opencode/context/core/essential-patterns.md"
+  ],
+  "agent_id": null,
+  "started_at": null,
+  "completed_at": "2026-06-26T11:27:53.722Z",
+  "completion_summary": "12 dummy products + types + pure helpers done",
+  "reference_files": [
+    ".tmp/external-context/nextjs-app-router/client-state-cart.md",
+    "lib/products/types.ts",
+    "lib/products/data.ts",
+    "lib/products/helpers.ts"
+  ],
+  "acceptance_criteria": [
+    "Product TypeScript type includes id, name, category, price, description, image placeholder, and stock flag.",
+    "Dummy catalog contains at least 12 products across Guitars, Parts, Accessories, and Violin categories.",
+    "Helper functions provide category list, price formatting, and search/filter logic as pure functions.",
+    "Data is static/dummy only and contains no backend API references.",
+    "Types are shared between store, cart, and product detail components."
+  ],
+  "deliverables": [
+    "lib/products/types.ts",
+    "lib/products/data.ts",
+    "lib/products/helpers.ts"
+  ]
+}
